@@ -8,7 +8,7 @@
 <h1><a href="/index.html">WEB</a></h1>
 <!-- unordered list -->
 <script>
-    var bodyTag = document.querySelector('ol');
+    var bodyTag = document.querySelector('body');
 </script>
 <input type="button" value="night" onclick="
     bodyTag.style.backgroundColor = 'black';
@@ -18,6 +18,21 @@
     bodyTag.style.backgroundColor = 'white';
     bodyTag.style.color = 'black';
 ">
+
+<input type="button" value="night" onclick="
+    // 만약에 this.value 값이 night라면 
+    if(this.value === 'night'){
+        bodyTag.style.backgroundColor = 'black';
+        bodyTag.style.color = 'white';
+        this.value = 'day';
+    // 그렇지 않다면
+    } else {
+        bodyTag.style.backgroundColor = 'white';
+        bodyTag.style.color = 'black';
+        this.value = 'night';
+    }
+">
+
 <ol>
     <li><a href="1.html">html</a></li>
     <li><a href="2.html">css</a></li>
