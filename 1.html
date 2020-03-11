@@ -5,22 +5,30 @@
     <title>WEB</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <script>
+
+function login(){
+    var password = '1111';
+    var inputPassword = prompt('password?');
+    if(password === inputPassword) {
+        alert('주인님 어서오세요~');
+        var utterance = new SpeechSynthesisUtterance('주인님 어서오세요');
+        window.speechSynthesis.speak(utterance);
+    } else {
+        alert('뉘슈?');
+        var utterance = new SpeechSynthesisUtterance('뉘슈?');
+        window.speechSynthesis.speak(utterance);
+        document.querySelector('body').className = 'hinge';
+    }
+}
+        
+    </script>
 </head>
 
 <body>
     <input type="button" value="login" onclick="
-        var password = '1111';
-        var inputPassword = prompt('password?');
-        if(password === inputPassword) {
-            alert('주인님 어서오세요~');
-            var utterance = new SpeechSynthesisUtterance('주인님 어서오세요');
-            window.speechSynthesis.speak(utterance);
-        } else {
-            alert('뉘슈?');
-            var utterance = new SpeechSynthesisUtterance('뉘슈?');
-            window.speechSynthesis.speak(utterance);
-            document.querySelector('body').className = 'hinge';
-        }
+        login();
     ">
     <h1><a href="/index.html" id="a1">WEB</a></h1>
     <!-- unordered list -->
@@ -40,6 +48,7 @@
     // 만약에 this.value 값이 night라면 
     var links = document.querySelectorAll('a');
     if(this.value === 'night'){
+        
         bodyTag.style.backgroundColor = 'black';
         bodyTag.style.color = 'white';
         this.value = 'day';
@@ -70,6 +79,10 @@
     </ol>
     <h2>html</h2>
     HTML is ...
+
+    <input type="button" value="login" onclick="
+        login();
+    ">
 </body>
 
 </html>
