@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
+
 <head>
-<title>WEB</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>WEB</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
+
 <body>
     <input type="button" value="login" onclick="
         var password = '1111';
@@ -20,21 +22,21 @@
             document.querySelector('body').className = 'hinge';
         }
     ">
-<h1><a href="/index.html">WEB</a></h1>
-<!-- unordered list -->
-<script>
-    var bodyTag = document.querySelector('body');
-</script>
-<input type="button" value="night" onclick="
+    <h1><a href="/index.html" id="a1">WEB</a></h1>
+    <!-- unordered list -->
+    <script>
+        var bodyTag = document.querySelector('body');
+    </script>
+    <input type="button" value="night" onclick="
     bodyTag.style.backgroundColor = 'black';
     bodyTag.style.color = 'white';
 ">
-<input type="button" value="day" onclick="
+    <input type="button" value="day" onclick="
     bodyTag.style.backgroundColor = 'white';
     bodyTag.style.color = 'black';
 ">
 
-<input type="button" value="night" onclick="
+    <input type="button" value="night" onclick="
     // 만약에 this.value 값이 night라면 
     if(this.value === 'night'){
         bodyTag.style.backgroundColor = 'black';
@@ -48,13 +50,13 @@
     }
 ">
 
-<ol>
-    <li><a href="1.html">html</a></li>
-    <li><a href="2.html">css</a></li>
-    <li><a href="3.html">js</a></li>
-</ol>
-<h2>html</h2>
-HTML is ...
+    <ol>
+        <li><a href="1.html"  id="a2">html</a></li>
+        <li><a href="2.html" id="a3">css</a></li>
+        <li><a href="3.html" id="a4">js</a></li>
+    </ol>
+    <h2>html</h2>
+    HTML is ...
 </body>
-</html>
 
+</html>
