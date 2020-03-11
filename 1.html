@@ -38,15 +38,28 @@
 
     <input type="button" value="night" onclick="
     // 만약에 this.value 값이 night라면 
+    var links = document.querySelectorAll('a');
     if(this.value === 'night'){
         bodyTag.style.backgroundColor = 'black';
         bodyTag.style.color = 'white';
         this.value = 'day';
+
+        var i = 0;
+        while(i<links.length) {
+            links[i].style.color = 'white';
+            i = i + 1;
+        }
     // 그렇지 않다면
     } else {
         bodyTag.style.backgroundColor = 'white';
         bodyTag.style.color = 'black';
         this.value = 'night';
+
+        var i = 0;
+        while(i<links.length) {
+            links[i].style.color = 'black';
+            i = i + 1;
+        }
     }
 ">
 
