@@ -85,8 +85,8 @@ function login(){
     ">
 
 
-<div>Teachable Machine Image Model</div>
-<button type="button" onclick="init()">Start</button>
+<div id="login_state"></div>
+<button type="button" onclick="init()">Login</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
@@ -96,7 +96,7 @@ function login(){
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "./my_model/";
+    const URL = "https://teachablemachine.withgoogle.com/models/Q9t3TtGZ/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -137,13 +137,20 @@ function login(){
     async function predict() {
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
-        for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+        if(prediction[1].probability>0.8){
+            document.querySelector('body').style.display = 'block';
+        } else {
+            document.querySelector('body').style.display = 'none';
         }
+        // for (let i = 0; i < maxPredictions; i++) {
+        //     const classPrediction =
+        //         prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+        //     labelContainer.childNodes[i].innerHTML = classPrediction;
+        // }
     }
 </script>
+
+
 
 </body>
 
