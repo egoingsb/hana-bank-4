@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Monoton|Six+Caps&display=swap" rel="stylesheet">
+    
+        <script>
+            function randomGeneratorForArray(length){
+                return Math.floor(Math.random()*length);
+            }
+        </script>
+    </head>
+    <body onclick="
+        
+        var colors = ['red', 'blue', 'green', 'powderblue', 'tomato']
+        this.style.backgroundColor = colors[randomGeneratorForArray(colors.length)];
+        this.style.color = colors[randomGeneratorForArray(colors.length)];
+    ">
+        <script>
+
+        </script>
+        <style>
+            * {
+                /* border: 5px solid red; */
+            }
+            body{
+                font-family: 'Six Caps', sans-serif;
+            }
+            h1{
+               font-size:100px; 
+               font-family: 'Six Caps', sans-serif;
+               border:5px solid red; 
+               padding-top:1px;
+               margin:1px;
+               display:inline;
+            }
+            a{
+                display:inline;
+                font-family: 'Saira Extra Condensed', sans-serif;
+
+            }
+        </style>
+        <h1>BOX</h1>
+        <h1>BOX</h1>
+        Lorem <a href="http://w3c.org">ipsum</a> dolor sit amet consectetur adipisicing elit. Impedit minima explicabo nobis debitis recusandae illum expedita aperiam, repudiandae aliquid maiores assumenda! Molestiae accusamus error possimus rem deserunt reiciendis sequi similique?<img width="100" src="https://source.unsplash.com/random">
+    </body>
+</html>
